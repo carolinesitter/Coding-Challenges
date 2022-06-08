@@ -1,14 +1,18 @@
-import hackbright-challenges
+import hackbright_challenges
 import unittest
 
-class PrintDigitsBackwards(unittest.TestCase):
-    """Test that the solution to print digits backwards is correct,
-        and that the digits indeed print backwards."""
-    
-    def test_print_digits(self):
-        assertIs(314, 413)
+from hackbright_challenges import is_pangram
 
+class Pangram(unittest.TestCase):
+    """Test if a string is a pangram or not."""
 
+    # Write a test to check if our pangram function works
+    def test_is_pangram(self):
+
+        # If we write, "I love cats!" we should get a False return value
+        assert(is_pangram("I love cats!") == False)
+
+        assert(is_pangram("Amazingly few discotheques provide jukeboxes.") == True)
 
 if __name__ == '__main__':
     unittest.main()
