@@ -43,28 +43,22 @@ def print_digits(num):
 
 # Pseudocode:
 ## define a function that takes in a string
-## create an empty list to add the variables to 
-## create a counter variable
+## create an empty set
 ## loop over each item in the string and check if it is alpha
 ## if so, add it to our set
-## loop through each item in the list and add it to our counter
-## if counter is equal to 26, return true ... else return false
+## if length of set is equal to 26, return true ... else return false
 
 # Code:
 def is_pangram(string):
     """Check if the string is a pangram, if so return true"""
 
-    letters = []
-    letter_count = 0
+    letters = set()
 
     for item in string:
         if item.isalpha():
-            letters.append(item)
-    
-    for letter in letters:
-        letter_count += 1
+            letters.add(item)
 
-    if letter_count >= 26:
+    if len(letters) >= 26:
         return True
     
     else:
