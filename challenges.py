@@ -27,3 +27,45 @@ def print_digits(num):
         next_digit = num % 10
         print(next_digit)
         num = (num-next_digit) // 10
+
+
+# CHALLENGE 2: PANGRAM
+
+# A pangram is a sentence that contains all the letters of the English alphabet
+# at least once, like "The quick brown fox jumps over the lazy dog." Write a 
+# function to check if a sentence is a pangram or not.
+
+# Test Case: 
+## >>> is_pangram("The quick brown fox jumps over the lazy dog")
+## True
+## >>> is_pangram("I love cats")
+## False
+
+# Pseudocode:
+## define a function that takes in a string
+## create an empty list to add the variables to 
+## create a counter variable
+## loop over each item in the string and check if it is alpha
+## if so, add it to our set
+## loop through each item in the list and add it to our counter
+## if counter is equal to 26, return true ... else return false
+
+# Code:
+def is_pangram(string):
+    """Check if the string is a pangram, if so return true"""
+
+    letters = []
+    letter_count = 0
+
+    for item in string:
+        if item.isalpha():
+            letters.append(item)
+    
+    for letter in letters:
+        letter_count += 1
+
+    if letter_count >= 26:
+        return True
+    
+    else:
+        return False
