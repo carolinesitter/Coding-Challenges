@@ -12,6 +12,7 @@ class Pangram(unittest.TestCase):
         # If we write, "I love cats!" we should get a False return value
         assert(is_pangram("I love cats!") == False)
 
+        # If we insert an actual pangram, we should get a True return value
         assert(is_pangram("Amazingly few discotheques provide jukeboxes.") == True)
 
 if __name__ == '__main__':
