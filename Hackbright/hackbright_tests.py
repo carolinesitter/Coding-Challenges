@@ -1,7 +1,7 @@
-import hackbright_challenges
+import pangram
 import unittest
 
-from hackbright_challenges import is_pangram
+from pangram import is_pangram
 
 class Pangram(unittest.TestCase):
     """Test if a string is a pangram or not."""
