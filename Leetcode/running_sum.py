@@ -41,3 +41,9 @@ class RunSum(object):
             running_sum.append(temp_sum)
 
         return running_sum
+
+
+# RUNTIME COMPLEXITY:
+# --------------------
+## The runtime complexity for this solution is O(N)/Linear as we are only looping
+## through the array once, adding it to a new list, and returning the new list.
