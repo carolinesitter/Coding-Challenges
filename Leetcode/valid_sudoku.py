@@ -66,7 +66,7 @@ class Sudoku(object):
                 ## we are in, return False
                 if (board[r][c] in rows[r] or 
                     board[r][c] in cols[c] or
-                    board[r][c] in squares[(r//3,c//3)])
+                    board[r][c] in squares[(r//3,c//3)]):
 
                     return False
                 
